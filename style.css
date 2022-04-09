@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@500&family=Roboto+Mono:wght@400;500;600&display=swap');
 
+:root {
+    --mainColor: rgb(255, 255, 255);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,13 +12,15 @@
 }
 
 body {
-    background-color: #3529c7;
+    background-image: linear-gradient(200deg, #f81926, #e15690, #83489e, #4d7, #04deea);
+    background-repeat: no-repeat;
     font-family: 'Bebas Neue', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;
+    color: var(--mainColor);
+    height: 100vh;
 }
 
 .container {
@@ -22,9 +28,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid white;
+    border: 1px solid var(--mainColor);
     height: 70vh;
     width: 70vw;
+    gap: 3em;
+    backdrop-filter: blur(250px);
 }
 
 header {
@@ -41,9 +49,9 @@ form {
 
 #text:focus,
 #text {
-    background-color: navy;
-    color: white;
-    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--mainColor);
+    border: 2px solid var(--mainColor);
     border-radius: 5px;
     height: 90%;
     outline: none;
@@ -56,8 +64,8 @@ form {
 #submitBtn {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0);
-    border: 2px solid white;
+    border: 2px solid var(--mainColor);
     border-radius: 5px;
-    color: white;
+    color: var(--mainColor);
     font-family: 'Roboto Mono'
 }
