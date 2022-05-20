@@ -1,20 +1,40 @@
 const speechBubble = document.querySelector("#text");
 const btn = document.querySelector("#submitBtn");
 const select = document.querySelector("#language");
-const opt = select.getElementsByTagName("option");
+const pitch = document.querySelector("#pitch");
+const rate = document.querySelector("#rate");
+const volume = document.querySelector("#volume");
+//const opt = select.getElementsByTagName("option");
 var msg = new SpeechSynthesisUtterance();
 msg.rate = 1.2;
 msg.pitch = 2;
+msg.volume = 1;
+
 btn.addEventListener("click", (e) => {
-    speek();
+    speak();
     e.preventDefault();
 })
 
-function speek() {
+pitch.addEventListener("change", () => {
+    msg.pitch = pitch.value;
+    console.log(pitch.value);
+})
+
+rate.addEventListener("change", () => {
+    msg.rate = rate.value;
+    console.log(rate.value);
+})
+
+volume.addEventListener("change", () => {
+    msg.volume = volume.value;
+    console.log(volume.value);
+})
+
+function speak() {
     txt = speechBubble.value;
     console.log(txt);
 
     msg.text = `${txt}`;
     window.speechSynthesis.speak(msg);
-    speechBubble.textContent = "";
+    speechBubble.value = "";
 }
