@@ -13,7 +13,8 @@ btn.addEventListener("click", (e) => {
 function speek() {
     txt = speechBubble.value;
     console.log(txt);
+
     msg.text = `${txt}`;
     window.speechSynthesis.speak(msg);
-    speechBubble.value = "";
+    speechBubble.textContent = "";
 }
