@@ -5,6 +5,7 @@ const pitch = document.querySelector("#pitch");
 const rate = document.querySelector("#rate");
 const volume = document.querySelector("#volume");
 const pitchInputText = document.querySelector("#pitch-input-text");
+const clearText = document.querySelector("#remove-txt-btn");
 var msg = new SpeechSynthesisUtterance();
 msg.rate = 1.2;
 msg.pitch = 1;
@@ -38,6 +39,11 @@ pitch.addEventListener("mousedown", () => {
 pitchInputText.addEventListener("change", () => {
     msg.pitch = pitchInputText.value;
     pitch.value = pitchInputText.value;
+})
+
+clearText.addEventListener("click", (e) => {
+    e.preventDefault();
+    speechBubble.value = "";
 })
 
 function speak() {
