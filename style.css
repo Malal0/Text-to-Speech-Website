@@ -81,7 +81,12 @@ form {
     background-color: #00000000;
     color: var(--mainColor);
     position: absolute;
-    right: 10px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgb(0, 0, 0));
+    border: none;
 }
 
 #submitBtn,
