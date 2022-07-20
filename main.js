@@ -7,7 +7,7 @@ const volume = document.querySelector("#volume");
 //const opt = select.getElementsByTagName("option");
 var msg = new SpeechSynthesisUtterance();
 msg.rate = 1.2;
-msg.pitch = 2;
+msg.pitch = 1;
 msg.volume = 1;
 
 btn.addEventListener("click", (e) => {
