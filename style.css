@@ -90,10 +90,9 @@ form {
 }
 
 #submitBtn,
-#language,
-#language:focus {
+#language {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #00000000;
     border: 2px solid var(--mainColor);
     border-radius: 5px;
     color: var(--mainColor);
@@ -120,6 +119,11 @@ form {
     min-width: 4.5em;
     max-width: 5em;
     text-align: center;
+}
+
+#language option {
+    color: hsl(0, 0%, 40%);
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* @media (min-width: 769px) {
