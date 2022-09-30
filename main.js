@@ -1,10 +1,10 @@
 const speechBubble = document.querySelector("#text");
 const btn = document.querySelector("#submitBtn");
 const select = document.querySelector("#language");
-const pitch = document.querySelector("#pitch");
-const rate = document.querySelector("#rate");
+const pitch = document.querySelector("#pitch-input-range");
+const rate = document.querySelector("#rate-input-range");
 const volume = document.querySelector("#volume");
-const pitchInputText = document.querySelector("#pitch-input-text");
+const pitchInputText = document.querySelector("#pitch-input-number");
 const clearText = document.querySelector("#remove-txt-btn");
 var msg = new SpeechSynthesisUtterance();
 msg.rate = 1.2;
@@ -51,5 +51,5 @@ function speak() {
 
     msg.text = `${txt}`;
     window.speechSynthesis.speak(msg);
-    speechBubble.value = "";
+    // speechBubble.value = "";
 }
