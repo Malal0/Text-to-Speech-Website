@@ -41,7 +41,7 @@ rate.addEventListener("change", () => {
 })
 rateInputText.addEventListener("change", () => {
     msg.rate = rate.value;
-    rateInputText.value = rate.value;
+    rate.value = rateInputText.value;
 })
 
 //volume related event listeners
