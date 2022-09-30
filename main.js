@@ -27,7 +27,6 @@ pitch.addEventListener("mousedown", () => {
     msg.pitch = pitch.value;
     pitchInputText.value = pitch.value;
 })
-
 pitchInputText.addEventListener("change", () => {
     msg.pitch = pitchInputText.value;
     pitch.value = pitchInputText.value;
@@ -37,7 +36,10 @@ pitchInputText.addEventListener("change", () => {
 rate.addEventListener("change", () => {
     msg.rate = rate.value;
     rateInputText.value = rate.value;
-    console.log(rate.value);
+})
+rate.addEventListener("mousedown", () => {
+    msg.rate = rate.value;
+    rateInputText.value = rate.value;
 })
 rateInputText.addEventListener("change", () => {
     msg.rate = rate.value;
@@ -48,10 +50,15 @@ rateInputText.addEventListener("change", () => {
 volume.addEventListener("change", () => {
     msg.volume = volume.value;
     volumeInputText.value = volume.value;
-    console.log(volume.value);
 })
-
-
+volumeInputText.addEventListener("change", () => {
+    msg.volume = volume.value;
+    volume.value = volumeInputText.value;
+})
+volume.addEventListener("change", () => {
+    msg.volume = volume.value;
+    volumeInputText.value = volume.value;
+})
 
 // clear text function
 clearText.addEventListener("click", (e) => {
