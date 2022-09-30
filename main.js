@@ -3,11 +3,11 @@ const btn = document.querySelector("#submitBtn");
 const select = document.querySelector("#language");
 const pitch = document.querySelector("#pitch-input-range");
 const rate = document.querySelector("#rate-input-range");
-const volume = document.querySelector("#volume");
+const volume = document.querySelector("#volume-input-range");
 const pitchInputText = document.querySelector("#pitch-input-number");
 const clearText = document.querySelector("#remove-txt-btn");
 var msg = new SpeechSynthesisUtterance();
-msg.rate = 1.2;
+msg.rate = 1;
 msg.pitch = 1;
 msg.volume = 1;
 
