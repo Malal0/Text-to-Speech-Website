@@ -25,6 +25,7 @@ pitch.addEventListener("change", () => {
 
 rate.addEventListener("change", () => {
     msg.rate = rate.value;
+    rateInputText.value = rate.value;
     console.log(rate.value);
 })
 
