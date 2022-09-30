@@ -1,5 +1,5 @@
 const speechBubble = document.querySelector("#text");
-const btn = document.querySelector("#submitBtn");
+const speakBtn = document.querySelector("#submitBtn");
 const select = document.querySelector("#language");
 const pitch = document.querySelector("#pitch-input-range");
 const rate = document.querySelector("#rate-input-range");
@@ -13,7 +13,7 @@ msg.rate = 1;
 msg.pitch = 1;
 msg.volume = 1;
 
-btn.addEventListener("click", (e) => {
+speakBtn.addEventListener("click", (e) => {
     speak();
     e.preventDefault();
 })
