@@ -31,6 +31,7 @@ rate.addEventListener("change", () => {
 
 volume.addEventListener("change", () => {
     msg.volume = volume.value;
+    volumeInputText.value = volume.value;
     console.log(volume.value);
 })
 
