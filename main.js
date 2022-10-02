@@ -63,7 +63,7 @@ volume.addEventListener("mousedown", () => {
 //  change the language with the select option
 // console.log(select.options[1].value)
 // console.log(select.value)
-select.addEventListener('change', () => 'value changed')
+select.addEventListener('change', changeLanguage)
 
 // clear text function
 clearText.addEventListener("click", (e) => {
@@ -77,4 +77,8 @@ function speak() {
     msg.text = `${txt}`;
     window.speechSynthesis.speak(msg);
     // speechBubble.value = "";
+}
+
+function changeLanguage() {
+    msg.lang = select.value
 }
