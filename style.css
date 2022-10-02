@@ -127,7 +127,7 @@ form {
 }
 
 #button-container label {
-    background-color: #44dd77;
+    display: grid;
 }
 
 
