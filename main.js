@@ -55,10 +55,15 @@ volumeInputText.addEventListener("change", () => {
     msg.volume = volume.value;
     volume.value = volumeInputText.value;
 })
-volume.addEventListener("change", () => {
+volume.addEventListener("mousedown", () => {
     msg.volume = volume.value;
     volumeInputText.value = volume.value;
 })
+
+//  change the language with the select option
+// console.log(select.options[1].value)
+// console.log(select.value)
+select.addEventListener('change', () => 'value changed')
 
 // clear text function
 clearText.addEventListener("click", (e) => {
