@@ -71,7 +71,7 @@ form {
 #text {
     background-color: #00000000;
     color: var(--mainColor);
-    border: 1px solid greenyellow;
+    border: 1px solid #fff;
     width: 100%;
     height: 100%;
     padding: 10px;
