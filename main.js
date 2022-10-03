@@ -13,6 +13,53 @@ msg.rate = 1;
 msg.pitch = 1;
 msg.volume = 1;
 
+function speak() {
+    txt = speechBubble.value;
+
+    msg.text = `${txt}`;
+    window.speechSynthesis.speak(msg);
+    // speechBubble.value = "";
+}
+
+// let voices = [];
+
+// function populateVoiceList() {
+//     if (typeof speechSynthesis === 'undefined') {
+//         return;
+//     }
+
+//     voices = speechSynthesis.getVoices();
+
+//     for (let i = 0; i < voices.length; i++) {
+//         const option = document.createElement('option');
+//         option.textContent = `${voices[i].name} (${voices[i].lang})`;
+
+//         if (voices[i].default) {
+//             option.textContent += ' — DEFAULT';
+//         }
+
+//         option.setAttribute('data-lang', voices[i].lang);
+//         option.setAttribute('data-name', voices[i].name);
+//         option.setAttribute('data-uri', voices[i].voiceURI);
+//         select.appendChild(option);
+//     }
+// }
+
+// populateVoiceList();
+// if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
+//     speechSynthesis.onvoiceschanged = populateVoiceList;
+// }
+
+function changeLanguage() {
+    msg.lang = select.selectedOptions[0].value;
+    // msg.voice = voices[select.selectedOptions[0].getAttribute('data-uri')];
+    console.log(msg.voice);
+}
+
+// //change the language option
+// select.addEventListener('change', changeLanguage)
+select.addEventListener('change', changeLanguage)
+
 speakBtn.addEventListener("click", (e) => {
     speak();
     e.preventDefault();
@@ -60,56 +107,3 @@ volume.addEventListener("mousedown", () => {
     volumeInputText.value = volume.value;
 })
 
-// //change the language option
-// select.addEventListener('change', changeLanguage)
-
-// clear text function
-clearText.addEventListener("click", (e) => {
-    e.preventDefault();
-    speechBubble.value = "";
-})
-
-function speak() {
-    txt = speechBubble.value;
-
-    msg.text = `${txt}`;
-    window.speechSynthesis.speak(msg);
-    // speechBubble.value = "";
-}
-
-let voices = speechSynthesis.getVoices();
-
-function populateVoiceList() {
-    if (typeof speechSynthesis === 'undefined') {
-        return;
-    }
-
-    voices = speechSynthesis.getVoices();
-
-    for (let i = 0; i < voices.length; i++) {
-        const option = document.createElement('option');
-        option.textContent = `${voices[i].name} (${voices[i].lang})`;
-
-        if (voices[i].default) {
-            option.textContent += ' — DEFAULT';
-        }
-
-        option.setAttribute('data-lang', voices[i].lang);
-        option.setAttribute('data-name', voices[i].name);
-        select.appendChild(option);
-    }
-}
-
-populateVoiceList();
-if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !== undefined) {
-    speechSynthesis.onvoiceschanged = populateVoiceList;
-}
-
-function changeLanguage() {
-    msg.lang = select.selectedOptions[0].getAttribute('data-lang');
-    msg.voice = voices[select.selectedOptions[0].getAttribute('data-name')];
-    console.log(msg.voice);
-}
-
-//change the language option
-select.addEventListener('change', changeLanguage)
