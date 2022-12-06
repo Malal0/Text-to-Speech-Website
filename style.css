@@ -20,7 +20,7 @@ body {
     align-items: center;
     flex-direction: column;
     color: var(--mainColor);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
@@ -29,10 +29,12 @@ body {
     align-items: center;
     flex-direction: column;
     border: 1px solid var(--mainColor);
-    height: 70vh;
-    width: 70vw;
+    min-height: 70vh;
+    min-width: 70vw;
     gap: 3em;
     backdrop-filter: blur(250px);
+    padding: 2em;
+    margin: 4em;
 }
 
 header {
@@ -80,6 +82,10 @@ form {
     padding: 10px;
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgb(0, 0, 0));
     border: none;
+}
+
+#remove-txt-btn:hover {
+    background-color: #00000030;
 }
 
 #submitBtn,
