@@ -13,6 +13,12 @@ msg.rate = 1;
 msg.pitch = 1;
 msg.volume = 1;
 
+clearText.addEventListener('click', (e) => {
+    e.preventDefault();
+    speechBubble.value = '';
+    console.log('huh');
+})
+
 function speak() {
     txt = speechBubble.value;
 
@@ -66,44 +72,31 @@ speakBtn.addEventListener("click", (e) => {
 })
 
 //pitch related event listeners
-pitch.addEventListener("change", () => {
+pitch.addEventListener("input", () => {
     msg.pitch = pitch.value;
     pitchInputText.value = pitch.value;
 })
-pitch.addEventListener("mousedown", () => {
-    msg.pitch = pitch.value;
-    pitchInputText.value = pitch.value;
-})
-pitchInputText.addEventListener("change", () => {
+pitchInputText.addEventListener("input", () => {
     msg.pitch = pitchInputText.value;
     pitch.value = pitchInputText.value;
 })
 
 //rate related event listeners
-rate.addEventListener("change", () => {
+rate.addEventListener("input", () => {
     msg.rate = rate.value;
     rateInputText.value = rate.value;
 })
-rate.addEventListener("mousedown", () => {
-    msg.rate = rate.value;
-    rateInputText.value = rate.value;
-})
-rateInputText.addEventListener("change", () => {
+rateInputText.addEventListener("input", () => {
     msg.rate = rate.value;
     rate.value = rateInputText.value;
 })
 
 //volume related event listeners
-volume.addEventListener("change", () => {
+volume.addEventListener("input", () => {
     msg.volume = volume.value;
     volumeInputText.value = volume.value;
 })
-volumeInputText.addEventListener("change", () => {
+volumeInputText.addEventListener("input", () => {
     msg.volume = volume.value;
     volume.value = volumeInputText.value;
 })
-volume.addEventListener("mousedown", () => {
-    msg.volume = volume.value;
-    volumeInputText.value = volume.value;
-})
-
