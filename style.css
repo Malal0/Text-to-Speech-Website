@@ -100,9 +100,9 @@ form {
     outline: none;
 }
 
-#button-container {
-    display: flex;
-    flex-direction: column;
+#input-container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
     gap: 10px;
 }
 
@@ -126,7 +126,7 @@ form {
     font-family: 'Roboto Mono', monospace;
 }
 
-#button-container label {
+#input-container label {
     display: grid;
 }
 
