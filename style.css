@@ -146,4 +146,42 @@ form {
     /* form {
         display: grid;
     } */
+    #text-container,
+    #text-container:focus {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: var(--mainColor);
+        border: 2px solid var(--mainColor);
+        border-radius: 5px;
+        font-family: 'Roboto Mono', monospace;
+        text-shadow: 1px 1px 4px;
+        box-shadow: 0px 0px 6px 2px;
+        height: fit-content;
+        position: relative;
+        width: 100%;
+    }
+
+    #input-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    #input-container> :nth-child(1) {
+        grid-column: 1/4;
+    }
+
+    #input-container> :nth-child(2) {
+        grid-column: 1/4;
+    }
+
+    #input-container> :nth-child(3) {
+        grid-column: 1;
+    }
+
+    #input-container> :nth-child(4) {
+        grid-column: 2;
+    }
+
+    #input-container> :nth-child(5) {
+        grid-column: 3;
+    }
 }
