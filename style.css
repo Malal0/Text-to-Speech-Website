@@ -35,6 +35,27 @@ body {
     backdrop-filter: blur(250px);
     padding: 2em;
     margin: 4em;
+    animation: fadeIn 2000ms, panIn 1000ms;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes panIn {
+    from {
+        transform: translateY(-500px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
 }
 
 header {
@@ -66,10 +87,10 @@ form {
 #text {
     background-color: #00000000;
     color: var(--mainColor);
-    border: 1px solid #fff;
     width: 100%;
     height: 100%;
     padding: 10px;
+    border: none;
     outline: none;
 }
 
@@ -130,22 +151,8 @@ form {
     display: grid;
 }
 
-
-/* @media (min-width: 769px) {
-    form {
-        display: none;
-    }
-}*/
-
 @media (min-width: 1020px) {
-    /* .container {
-        border: 1px solid red;
-        display: grid;
-    } */
 
-    /* form {
-        display: grid;
-    } */
     #text-container,
     #text-container:focus {
         background-color: rgba(0, 0, 0, 0.5);
